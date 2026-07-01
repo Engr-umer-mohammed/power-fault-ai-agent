@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+fault_history.json
+reports/
+temp/
+uploads/
+.idea/
+.vscode/
