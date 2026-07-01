@@ -11,9 +11,9 @@ This project combines **Google Gemini AI** with **power engineering principles**
 - ✅ Deploy as a **Telegram Bot** for 24/7 accessibility
 ##  Architecture
 User Interface 
-	Telegram Bot / Console
+	   Telegram Bot / Console
 PowerFaultAgen
-	 PERCEIVE │→│ THINK │→│ ACT │→│ REMEMBER 
+	       PERCEIVE │→│ THINK │→│ ACT │→│ REMEMBER 
 tools.py 
 	Engineering calculation
 Gemini A
@@ -22,6 +22,7 @@ report
 <img width="590" height="518" alt="image" src="https://github.com/user-attachments/assets/9c577acb-5388-41de-8bf1-4a55c0673e70" />
 
 ##  Features
+
 | Feature                                                       Description 
 
  **🧠 AI-Powered Analysis**       Uses Google Gemini 3.5 Flash (with automatic fallback to 2.0 Flash, 1.5 Pro) 
@@ -31,7 +32,9 @@ report
 | **🤖 Telegram Bot**               24/7 accessible with auto-reconnection 
 | **🔄 Auto-Model Fallback**  Automatically switches models if Gemini is busy (503 error) 
 | **📊 Professional Reports**  Detailed analysis with actionable recommendations 
+
 2. Install Dependencies
+
 pip install -r requirements.txt
 3. Set Up Environment Variables
 Create a .env file in the project root:
