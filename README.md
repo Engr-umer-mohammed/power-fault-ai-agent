@@ -1,7 +1,14 @@
+markdown
 # ⚡ Power Fault AI Agent
-**An intelligent AI-powered agent for electrical power system fault detection and diagnosis.*
-## Overview
+
+**An intelligent AI-powered agent for electrical power system fault detection and diagnosis.**
+
+---
+
+## 🎯 Overview
+
 This project combines **Google Gemini AI** with **power engineering principles** to create an intelligent assistant that can:
+
 - ✅ Analyze voltage, current, and frequency readings
 - ✅ Detect overcurrent, voltage sag, and short circuits
 - ✅ Calculate voltage imbalance
@@ -9,35 +16,48 @@ This project combines **Google Gemini AI** with **power engineering principles**
 - ✅ Learn from past faults (memory system)
 - ✅ Accept data via manual input OR file upload (CSV, Excel, JSON, TXT)
 - ✅ Deploy as a **Telegram Bot** for 24/7 accessibility
-##  Architecture
+
+---
+
+## 🏗️ Architecture
 User Interface 
-	   Telegram Bot / Console
+
+	Telegram Bot / Console
 PowerFaultAgen
-	       PERCEIVE │→│ THINK │→│ ACT │→│ REMEMBER 
+	 PERCEIVE │→│ THINK │→│ ACT │→│ REMEMBER 
 tools.py 
 	Engineering calculation
 Gemini A
 memory
-report
-<img width="590" height="518" alt="image" src="https://github.com/user-attachments/assets/9c577acb-5388-41de-8bf1-4a55c0673e70" />
+result
+<img width="739" height="518" alt="image" src="https://github.com/user-attachments/assets/012209df-9728-402a-b255-a2e92c0ca6af" />
 
-##  Features
+## ✨ Features
 
-| Feature                                                       Description 
+| Feature | Description |
+|---------|-------------|
+| **🧠 AI-Powered Analysis** | Uses Google Gemini 3.5 Flash (with automatic fallback to 2.0 Flash, 1.5 Pro) |
+| **🔧 Engineering Tools** | Voltage imbalance, overcurrent detection, frequency analysis |
+| **📁 File Upload** | CSV, Excel (.xlsx), JSON, TXT |
+| **💾 Memory System** | Saves all faults to JSON + human-readable TXT reports |
+| **🤖 Telegram Bot** | 24/7 accessible with auto-reconnection |
+| **🔄 Auto-Model Fallback** | Automatically switches models if Gemini is busy (503 error) |
+| **📊 Professional Reports** | Detailed analysis with actionable recommendations |
 
- **🧠 AI-Powered Analysis**       Uses Google Gemini 3.5 Flash (with automatic fallback to 2.0 Flash, 1.5 Pro) 
-| **🔧 Engineering Tools**         Voltage imbalance, overcurrent detection, frequency analysis 
-| **📁 File Upload**                  CSV, Excel (.xlsx), JSON, TXT 
-| **💾 Memory System**         Saves all faults to JSON + human-readable TXT reports 
-| **🤖 Telegram Bot**               24/7 accessible with auto-reconnection 
-| **🔄 Auto-Model Fallback**  Automatically switches models if Gemini is busy (503 error) 
-| **📊 Professional Reports**  Detailed analysis with actionable recommendations 
+---
 
+## 🚀 Quick Start
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Engr-umer-mohammed/power-fault-ai-agent.git
+cd power-fault-ai-agent
 2. Install Dependencies
-
+bash
 pip install -r requirements.txt
 3. Set Up Environment Variables
 Create a .env file in the project root:
+
 env
 GEMINI_API_KEY=your_gemini_api_key_here
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
@@ -55,13 +75,17 @@ Command	Description
 /about	Developer info
 Input Formats
 1. Manual Input:
+
 text
 voltage_a: 220, voltage_b: 218, voltage_c: 221, current: 45, frequency: 50.0
 2. Comma Separated:
+
 text
 220, 218, 221, 45, 50.0
 3. File Upload:
-•	CSV, Excel, JSON, or TXT
+
+CSV, Excel, JSON, or TXT
+
 Example Scenarios
 text
 ✅ Normal: 220, 219, 221, 45, 50.0
@@ -93,26 +117,46 @@ JSON	Memory storage
 dotenv	Environment variable management
 🔬 Model Fallback System
 The agent automatically tries multiple Gemini models if the primary is overloaded:
-1.	Primary: gemini-3.5-flash
-2.	Fallback 1: gemini-2.0-flash
-3.	Fallback 2: gemini-1.5-flash
-4.	Fallback 3: gemini-1.5-pro
+
+Primary: gemini-3.5-flash
+
+Fallback 1: gemini-2.0-flash
+
+Fallback 2: gemini-1.5-flash
+
+Fallback 3: gemini-1.5-pro
+
 Each model is retried 2 times with a 3-second delay before switching.
+
 👨‍💻 Developer
 Umer Mohamed
-•	Title: Senior Electrical Power Engineer
-•	Expertise: Power Systems, Protection, AI, Data Handling
-•	LinkedIn: linkedin.com/in/engr-umer-mohammed
-•	GitHub: github.com/Engr-umer-mohammed
-•	Email: umermohammed62@gmail.com
+
+Title: Senior Electrical Power Engineer
+
+Expertise: Power Systems, Protection, AI, Data Handling
+
+LinkedIn: linkedin.com/in/engr-umer-mohammed
+
+GitHub: github.com/Engr-umer-mohammed
+
+Email: umermohammed62@gmail.com
+
 🤝 Contributing
 Contributions are welcome! Please:
-1.	Fork the repository
-2.	Create a feature branch
-3.	Submit a pull request
+
+Fork the repository
+
+Create a feature branch
+
+Submit a pull request
+
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 📞 Support
 For questions or collaboration:
-•	Email: umermohammed62@gmail.com
-•	LinkedIn: linkedin.com/in/engr-umer-mohammed
+
+Email: umermohammed62@gmail.com
+
+LinkedIn: linkedin.com/in/engr-umer-mohammed
+
